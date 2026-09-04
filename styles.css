@@ -1,0 +1,372 @@
+:root {
+  --paper: #efeee9;
+  --paper-alt: #e5e2d9;
+  --ink: #1c1b19;
+  --ink-soft: #57534a;
+  --rule: #c9c2b0;
+  --accent: #e8570b;
+  --blue: #2e4c6d;
+
+  --display: 'Space Grotesk', sans-serif;
+  --sans: 'IBM Plex Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+a { color: inherit; }
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.wordmark {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  padding-top: 84px;
+  padding-bottom: 64px;
+}
+
+.hero-marks {
+  position: absolute;
+  inset: 24px 0 24px 0;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 28px;
+  pointer-events: none;
+}
+
+.mark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--rule);
+}
+
+.mark-tl { top: 0; left: 28px; border-right: none; border-bottom: none; }
+.mark-tr { top: 0; right: 28px; border-left: none; border-bottom: none; }
+.mark-bl { bottom: 0; left: 28px; border-right: none; border-top: none; }
+.mark-br { bottom: 0; right: 28px; border-left: none; border-top: none; }
+
+.eyebrow-plain {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin: 0 0 20px;
+}
+
+.hero-lede {
+  max-width: 56ch;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Section titles */
+
+.section-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 32px;
+  padding-top: 56px;
+  border-top: 1px solid var(--rule);
+}
+
+/* Projects */
+
+.project {
+  padding-bottom: 56px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.project:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.title-block {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  padding: 12px 0;
+  margin-bottom: 22px;
+}
+
+.proj-no {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.title-block-main h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.32rem;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.proj-meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.proj-body {
+  max-width: 66ch;
+  margin: 0 0 26px;
+  color: var(--ink);
+}
+
+.proj-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.img-slot {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--rule);
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--paper-alt),
+    var(--paper-alt) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.proj-gallery.gallery-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.img-slot.filled {
+  background-image: none;
+  background-color: var(--paper-alt);
+  overflow: hidden;
+  display: block;
+}
+
+.img-slot.filled img {
+  width: 100%;
+  height: calc(100% - 27px);
+  object-fit: cover;
+  display: block;
+}
+
+.img-slot figcaption {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  padding: 6px 8px;
+}
+
+/* Section lede */
+
+.section-lede {
+  max-width: 62ch;
+  color: var(--ink-soft);
+  margin: -14px 0 32px;
+}
+
+/* Doc link (write-up PDFs) */
+
+.doc-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  width: fit-content;
+  max-width: 100%;
+  transition: background 0.15s ease;
+}
+
+.doc-link:hover {
+  background: var(--paper-alt);
+}
+
+.doc-link-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.doc-link-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+/* CAD Models */
+
+.cad-models {
+  padding-bottom: 64px;
+}
+
+.model-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.model-slot {
+  aspect-ratio: 1 / 1;
+}
+
+/* Writing */
+
+.writing {
+  padding-bottom: 64px;
+}
+
+.writeup {
+  padding-bottom: 8px;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  background: var(--paper-alt);
+  padding: 44px 0;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.footer-email {
+  font-family: var(--mono);
+  font-size: 1.02rem;
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+  width: fit-content;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .proj-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .proj-gallery.gallery-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .model-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero { padding-top: 64px; }
+}
+
+@media (max-width: 420px) {
+  .proj-gallery {
+    grid-template-columns: 1fr;
+  }
+  .model-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

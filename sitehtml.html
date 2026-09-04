@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luke Desnoyer — Engineering Portfolio</title>
+<meta name="description" content="Design and fabrication projects by Luke Desnoyer, Industrial and Operations Engineering student at the University of Michigan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">Luke Desnoyer</a>
+    <nav class="site-nav">
+      <a href="#projects">Projects</a>
+      <a href="#cad-models">CAD Models</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero-marks" aria-hidden="true">
+      <span class="mark mark-tl"></span>
+      <span class="mark mark-tr"></span>
+      <span class="mark mark-bl"></span>
+      <span class="mark mark-br"></span>
+    </div>
+    <p class="eyebrow-plain">Engineering portfolio</p>
+    <h1>Luke Desnoyer</h1>
+    <p class="hero-lede">
+      Industrial and Operations Engineering student at the University of Michigan, pursuing a BSE.
+      This is a working record of design and fabrication projects, from CAD modeling in Fusion 360
+      to CNC machining, 3D printing, and physical prototypes.
+    </p>
+  </section>
+
+  <section id="projects" class="projects wrap">
+    <h2 class="section-title">Projects</h2>
+
+    <article class="project">
+      <div class="title-block">
+        <span class="proj-no">01</span>
+        <div class="title-block-main">
+          <h3>Drill Press Vice Model</h3>
+          <p class="proj-meta">Fusion 360, motion joints, stress simulation</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        Working from a full set of engineering design sheets, I modeled a drill press vice at true
+        1:1 scale in Fusion 360. It's built from more than 20 components, assembled with functioning
+        motion joints, and I ran stress simulations afterward to see how it would hold up under real
+        load. The hard part was accuracy: with that many parts, small dimensional errors stacked up
+        fast, and I ended up rebuilding several components from scratch once tolerances stopped
+        lining up.
+      </p>
+      <div class="proj-gallery">
+        <figure class="img-slot filled"><img src="images/vice-angle.jpg" alt="Drill press vice CAD model, angle view"><figcaption>CAD model — angle view</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/vice-front.jpg" alt="Drill press vice CAD model, front view"><figcaption>CAD model — front view</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/vice-side.jpg" alt="Drill press vice CAD model, side view"><figcaption>CAD model — side view</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="title-block">
+        <span class="proj-no">02</span>
+        <div class="title-block-main">
+          <h3>CNC Sign Design</h3>
+          <p class="proj-meta">Fusion 360, CNC toolpathing</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        My first project involving CNC machining. I designed a wooden nameplate sign and had to
+        program the toolpath myself, an adaptive-clearing and 3D-contour combination I worked out
+        through trial and error, having never toolpathed before. The design also changed mid-process:
+        once I started modeling, I realized my sketched concept wouldn't translate well to the router,
+        so I redesigned it on the fly and machined the new version instead.
+      </p>
+      <div class="proj-gallery">
+        <figure class="img-slot filled"><img src="images/sign-cad.jpg" alt="CNC sign CAD model, a smiley face and the name LUKE1"><figcaption>CAD model</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/sign-toolpath.jpg" alt="CNC toolpath for the sign, adaptive clearing and 3D contours"><figcaption>Toolpath</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/sign-final.jpg" alt="Finished CNC-machined wooden sign"><figcaption>Physical fabrication</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="title-block">
+        <span class="proj-no">03</span>
+        <div class="title-block-main">
+          <h3>Workshop Small-Parts Organizer</h3>
+          <p class="proj-meta">Fusion 360, 3D printing (PLA)</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        I walked through my classroom's workshop looking for a real problem to solve and landed on
+        a common one: small parts left scattered across worktables with nowhere to go. I designed a
+        mountable parts organizer that clips onto a table corner, modeled it in Fusion 360, and 3D
+        printed it in PLA. It's still in use, organizing desk clutter in my own room.
+      </p>
+      <div class="proj-gallery">
+        <figure class="img-slot filled"><img src="images/organizer-cad.jpg" alt="CAD model of the small-parts organizer, top view showing compartments"><figcaption>CAD model</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/organizer-sheet.jpg" alt="Design sheet, top view, for the small-parts organizer"><figcaption>Design sheet — top view</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/organizer-print.jpg" alt="3D-printed small-parts organizer in grey PLA"><figcaption>3D-printed fabrication</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="title-block">
+        <span class="proj-no">04</span>
+        <div class="title-block-main">
+          <h3>Cardboard Chair Design</h3>
+          <p class="proj-meta">Partner project &middot; Fusion 360, anthropometric data, load testing</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        My partner and I set out to build a chair that could hold real weight using nothing but
+        cardboard. Before modeling anything, we collected anthropometric measurements from
+        classmates so the dimensions would actually fit an average student, not just look right on
+        screen. We modeled the design in Fusion 360, split the physical build (one of us cutting,
+        one assembling), and load-tested it to failure: it held 450 lbs before it gave out.
+      </p>
+      <div class="proj-gallery">
+        <figure class="img-slot filled"><img src="images/chair-anthro.jpg" alt="Anthropometric data table collected from classmates"><figcaption>Anthropometric data</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/chair-sheet-side.jpg" alt="Design sheet, side view, for the cardboard chair"><figcaption>Design sheet — side view</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/chair-test.jpg" alt="Cardboard chair prototype loaded with sandbags for a strength test"><figcaption>Physical build &amp; load test</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="title-block">
+        <span class="proj-no">05</span>
+        <div class="title-block-main">
+          <h3>Study Divider Design</h3>
+          <p class="proj-meta">Fusion 360, user research, iterative prototyping</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        I wanted to fix a problem I deal with myself: losing focus in shared study spaces. Before
+        designing anything, I surveyed AP and IB students at my school and found nearly three
+        quarters reported being often or always distracted while studying. I looked at what already
+        existed and found the options were either too expensive, too bulky to carry, or didn't block
+        enough. I modeled a folding chipboard desk divider in Fusion 360 that collapses flat when
+        not in use, then built and stress-tested a physical prototype, which surfaced weak points I
+        fixed in the next iteration.
+      </p>
+      <div class="proj-gallery gallery-4">
+        <figure class="img-slot filled"><img src="images/divider-sketch.jpg" alt="Initial concept sketch for the folding desk divider, with design notes"><figcaption>Concept sketch</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/divider-cad.jpg" alt="Fusion 360 CAD model of the tri-panel folding desk divider"><figcaption>CAD model</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/divider-sheet.jpg" alt="Dimensioned design sheet for the tri-panel folding desk divider"><figcaption>Design sheet</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/divider-proto.jpg" alt="Physical cardboard prototype of the divider with felt acoustic panels and a dry-erase surface"><figcaption>Physical prototype</figcaption></figure>
+      </div>
+      <a class="doc-link" href="writeups/study-divider-writeup.pdf">
+        <span class="doc-link-label">Read the full write-up</span>
+        <span class="doc-link-title">Folding Divider for Limiting Distractions and Increasing the Span of Useful Study Area</span>
+      </a>
+    </article>
+
+    <article class="project">
+      <div class="title-block">
+        <span class="proj-no">06</span>
+        <div class="title-block-main">
+          <h3>Rivalry Split Table</h3>
+          <p class="proj-meta">Woodworking, CAD-measured layout, painting</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        A build outside of class: a tabletop split straight down the middle, half Michigan
+        State green with the block S, half Michigan navy with the block M, legs painted
+        to match each side. I planned the split layout, primed and painted both halves in
+        team colors, then hand-painted the legs. The logos themselves aren't stenciled.
+        A stencil that size wasn't practical to source, so I sized both marks in CAD first
+        and worked out the actual angles and dimensions, then used those measurements to
+        draw each logo directly onto the surface freehand before painting it in. It's a
+        smaller project than the CAD work above, but the same instinct applies: plan the
+        geometry properly before you touch a brush.
+      </p>
+      <div class="proj-gallery">
+        <figure class="img-slot filled"><img src="images/table-s-layout.jpg" alt="Hand-measured layout sketch for the block S logo, with angles and dimensions"><figcaption>S logo — measured layout</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/table-m-layout.jpg" alt="Hand-measured layout sketch for the block M logo, with angles and dimensions"><figcaption>M logo — measured layout</figcaption></figure>
+        <figure class="img-slot filled"><img src="images/table-final.jpg" alt="Finished rivalry table, split green and navy with painted logos and matching legs"><figcaption>Finished table</figcaption></figure>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="cad-models" class="cad-models wrap">
+    <h2 class="section-title">Best CAD Models</h2>
+    <p class="section-lede">
+      A few standalone Fusion 360 models built outside of major projects, chosen to show range
+      rather than tell a single story.
+    </p>
+    <div class="model-gallery">
+      <figure class="img-slot model-slot filled"><img src="images/model-elbow-pipe.jpg" alt="CAD drawing of a flanged elbow pipe assembly"><figcaption>Elbow Pipe Model</figcaption></figure>
+      <figure class="img-slot model-slot filled"><img src="images/model-titan-1-3m.jpg" alt="CAD drawing, Titan 1-3M practice model"><figcaption>Titan 1-3M</figcaption></figure>
+      <figure class="img-slot model-slot filled"><img src="images/model-titan-86l.jpg" alt="CAD drawing, Titan 86L rocket coupling"><figcaption>Titan 86L Rocket Coupling</figcaption></figure>
+      <figure class="img-slot model-slot filled"><img src="images/model-titan-4.jpg" alt="CAD drawing, Titan 4 triangular bracket"><figcaption>Titan 4</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="writing" class="writing wrap">
+    <h2 class="section-title">Writing</h2>
+
+    <article class="writeup">
+      <div class="title-block">
+        <span class="proj-no">A</span>
+        <div class="title-block-main">
+          <h3>NFL Field Goal Success by Distance</h3>
+          <p class="proj-meta">Logistic regression model built on 2024 season data</p>
+        </div>
+      </div>
+      <p class="proj-body">
+        A statistical analysis of how field goal success probability changes with kick
+        distance. I pulled 2024 season data, fit a logistic model to it, derived a physical
+        upper bound on kick distance from projectile motion, and checked the model against
+        a real kicker's season stats.
+      </p>
+      <a class="doc-link" href="writeups/field-goal-analysis.pdf">
+        <span class="doc-link-label">Read the full analysis</span>
+        <span class="doc-link-title">Modeling NFL Field Goal Success Probability as a Function of Distance</span>
+      </a>
+    </article>
+
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Interested in the work or want to talk about an opportunity?</p>
+    <a class="footer-email" href="mailto:luke_desnoyer@yahoo.com">luke_desnoyer@yahoo.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
