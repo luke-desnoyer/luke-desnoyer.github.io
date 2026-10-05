@@ -200,11 +200,11 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+  align-items: start;
 }
 
 .img-slot {
   margin: 0;
-  aspect-ratio: 4 / 3;
   border: 1px solid var(--rule);
   background-image: repeating-linear-gradient(
     45deg,
@@ -231,8 +231,7 @@ a { color: inherit; }
 
 .img-slot.filled img {
   width: 100%;
-  height: calc(100% - 27px);
-  object-fit: contain;
+  height: auto;
   display: block;
 }
 
@@ -298,10 +297,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-}
-
-.model-slot {
-  aspect-ratio: 1 / 1;
+  align-items: start;
 }
 
 /* Writing */
